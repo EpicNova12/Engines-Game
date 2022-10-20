@@ -2,9 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System.Runtime.InteropServices;
 
 public class PlayerMovement : MonoBehaviour
 {
+    //Import DLL
+    //DLL will allow the user to alter the players attributes
+    [DllImport("StatsPlugin")]
+    private static extern float LoadFromFile(int j, string fileName);
+    [DllImport("StatsPlugin")]
+    private static extern int GetLines(string fileName);
+
+    string m_file;
+
     //Instance
     public static PlayerMovement instance;
     //Rigidbody
@@ -46,8 +56,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        m_file = Application.dataPath + "/PlayerStats";
         playerBody = GetComponent<Rigidbody>();
         playerBody.freezeRotation = true;
+
+        GetCustomStats();
 
        // animator = GetComponent<Animator>();
     }
@@ -127,6 +140,19 @@ public class PlayerMovement : MonoBehaviour
     private void ResetJump()
     {
         canJump = true;
+    }
+
+    void GetCustomStats()
+    {
+        //Speed
+        playerSpeed = LoadFromFile(5, m_file);
+        groundDrag = LoadFromFile(7, m_file);
+        airDrag = LoadFromFile(9, m_file);
+
+        //Jump
+        jumpForce = LoadFromFile(13, m_file);
+        jumpCooldown = LoadFromFile(15, m_file);
+        airMultiplier = LoadFromFile(17, m_file);
     }
 }
 

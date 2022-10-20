@@ -1,0 +1,17 @@
+Players Movement Stats
+Default Stats are, Speed:7, Ground Drag:5, Air Drag:0, Jump Force: 10, Jump Cooldown: 0.5, Air Multiplier: 0.2
+Speed Stats
+Speed: 
+10
+Ground Drag: 
+5
+Air Drag: 
+0
+
+Jump Stats
+Jump Force: 
+15
+Jump Cooldown: 
+0.5
+Air Multiplier: 
+0.2
