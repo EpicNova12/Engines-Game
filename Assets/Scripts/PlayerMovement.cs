@@ -8,9 +8,9 @@ public class PlayerMovement : MonoBehaviour
 {
     //Import DLL
     //DLL will allow the user to alter the players attributes
-    [DllImport("StatsPlugin")]
+    [DllImport("EnginesGameDLL")]
     private static extern float LoadFromFile(int j, string fileName);
-    [DllImport("StatsPlugin")]
+    [DllImport("EnginesGameDLL")]
     private static extern int GetLines(string fileName);
 
     string m_file;
