@@ -59,14 +59,20 @@
     <Compile Include="Assets\Scripts\Command.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraControls.cs" />
+    <Compile Include="Assets\Scripts\ObjectPool\ObjectPooler.cs" />
     <Compile Include="Assets\Scripts\InputHandler.cs" />
     <Compile Include="Assets\Scripts\DropDown.cs" />
+    <Compile Include="Assets\Scripts\ObjectPool\Pool.cs" />
     <Compile Include="Assets\Scripts\ButtonConfig.cs" />
+    <Compile Include="Assets\Scripts\Gun\ShootingOld.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Observer.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PluginTester.cs" />
+    <Compile Include="Assets\Scripts\Gun\BulletOld.cs" />
+    <Compile Include="Assets\Scripts\Gun\Shooting.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraHolder.cs" />
+    <Compile Include="Assets\Scripts\Gun\Bullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -774,8 +780,14 @@
     <Reference Include="Unity.EditorCoroutines.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Services.Core.Analytics">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>

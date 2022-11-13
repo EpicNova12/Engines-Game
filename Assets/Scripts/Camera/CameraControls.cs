@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class CameraControls : MonoBehaviour
 {
-    public float horizontalSensitivity;
+   /* public float horizontalSensitivity;
     public float verticalSensitivity;
 
     public Transform orientation;
 
     float xRot;
-    float yRot;
+    float yRot;*/
 
     void Start()
     {
@@ -20,7 +20,7 @@ public class CameraControls : MonoBehaviour
 
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * horizontalSensitivity * Time.fixedDeltaTime;
+       /* float mouseX = Input.GetAxis("Mouse X") * horizontalSensitivity * Time.fixedDeltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * verticalSensitivity * Time.fixedDeltaTime;
 
         yRot += mouseX;
@@ -28,7 +28,7 @@ public class CameraControls : MonoBehaviour
         xRot = Mathf.Clamp(xRot,-90.0f,90.0f);
 
         transform.rotation = Quaternion.Euler(xRot, yRot, 0);
-        orientation.rotation = Quaternion.Euler(0, yRot, 0);
+        orientation.rotation = Quaternion.Euler(0, yRot, 0);*/
 
     }
 }

@@ -33,7 +33,7 @@ public class ShootCommand : Command
 {
     public override void Execute()
     {
-        //Shoot();
+        Shooting.instance.Shoot();
     }
 }
 public class MeleeCommand : Command

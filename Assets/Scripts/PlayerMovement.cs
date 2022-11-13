@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpCooldown;
     private bool canJump = true;
     public float airMultiplier;
-
+    
     private void Awake()
     {
         if (instance == null)
@@ -60,7 +60,8 @@ public class PlayerMovement : MonoBehaviour
         playerBody = GetComponent<Rigidbody>();
         playerBody.freezeRotation = true;
 
-        GetCustomStats();
+        orientation = Camera.main.transform;
+        //GetCustomStats();
 
        // animator = GetComponent<Animator>();
     }
