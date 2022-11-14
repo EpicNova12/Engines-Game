@@ -44,7 +44,7 @@ public class ObjectPooler : MonoBehaviour
     {
         if(!poolDictionary.ContainsKey(tag))
         {
-            Debug.Log("Pool with the tag "+ tag + " doesnt exsist!");
+            Debug.Log("There is no "+ tag +" pool");
             return null;
         }
 

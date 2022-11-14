@@ -10,6 +10,7 @@
 -a="D:\Software\Engines Game\Engines-Game\Library\PlayerScriptAssemblies\Unity.Services.Core.Configuration.dll"
 -a="D:\Software\Engines Game\Engines-Game\Library\PlayerScriptAssemblies\Unity.Services.Core.dll"
 -a="D:\Software\Engines Game\Engines-Game\Library\PlayerScriptAssemblies\Unity.VisualScripting.Core.dll"
+-a="D:\Software\Engines Game\Engines-Game\Library\PlayerScriptAssemblies\Cinemachine.dll"
 -a="D:\Software\Engines Game\Engines-Game\Library\PlayerScriptAssemblies\Unity.Services.Core.Analytics.dll"
 -a="D:\Software\Engines Game\Engines-Game\Library\PlayerScriptAssemblies\Unity.Services.Core.Registration.dll"
 -a="D:\Software\Engines Game\Engines-Game\Library\PlayerScriptAssemblies\Unity.Services.Core.Environments.dll"
