@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpCooldown;
     private bool canJump = true;
     public float airMultiplier;
-    
+
     private void Awake()
     {
         if (instance == null)

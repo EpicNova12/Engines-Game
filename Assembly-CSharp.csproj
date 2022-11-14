@@ -73,6 +73,11 @@
     <Compile Include="Assets\Scripts\Gun\Shooting.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraHolder.cs" />
     <Compile Include="Assets\Scripts\Gun\Bullet.cs" />
+    <Compile Include="Assets\Scripts\Achievements\AchivementManager.cs" />
+    <Compile Include="Assets\Scripts\Achievements\Achivement.cs" />
+    <Compile Include="Assets\Scripts\Achievements\AchievementList.cs" />
+    <Compile Include="Assets\Scripts\Achievements\Subject.cs" />
+    <Compile Include="Assets\Scripts\Achievements\TestAchivement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

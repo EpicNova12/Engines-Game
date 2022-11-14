@@ -26,8 +26,8 @@ public class Shooting : MonoBehaviour
 
     public void Shoot()
     {
-        Rigidbody bulletRb = ObjectPooler.instance.SpawnFromPool("Bullet",Gun.position+new Vector3(0.0f,0.0f,-1.5f),Quaternion.identity).GetComponent<Rigidbody>();
-        bulletRb.AddForce(transform.forward * -bulletSpeed, ForceMode.Impulse);
+        Rigidbody bulletRb = ObjectPooler.instance.SpawnFromPool("Bullet",bulletSpawn.position,bulletSpawn.rotation).GetComponent<Rigidbody>();
+        bulletRb.AddForce(bulletSpawn.forward * bulletSpeed, ForceMode.Impulse);
     }
 
     private void Update()

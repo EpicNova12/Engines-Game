@@ -27,7 +27,7 @@ public class ShootingOld : MonoBehaviour
     {
         var bulletCreate = Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
         bulletCreate.GetComponent<Rigidbody>().velocity = bulletSpawn.forward * bulletSpeed;
-        Destroy(bulletCreate, 1);
+        Destroy(bulletCreate, 5);
     }
 
     private void Update()

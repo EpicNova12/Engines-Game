@@ -20,8 +20,8 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        //gameObject.SetActive(false);
-
+        gameObject.SetActive(false);
+        
         /*if(other.collider.tag== "Player")
         {
             Destroy(other.gameObject);
