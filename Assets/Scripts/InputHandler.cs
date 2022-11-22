@@ -8,6 +8,7 @@ public class InputHandler : MonoBehaviour
     Command Jump = new JumpCommand();
     Command Shoot = new ShootCommand();
     Command Melee = new MeleeCommand();
+    Command Reload = new ReloadCommand();
 
     private void Awake()
     {
@@ -16,6 +17,7 @@ public class InputHandler : MonoBehaviour
         Jump.key= KeyCode.Space;
         Shoot.key = KeyCode.Mouse0;
         Melee.key = KeyCode.Mouse1;
+        Reload.key = KeyCode.R;
     }
     private void Update()
     {
@@ -38,6 +40,11 @@ public class InputHandler : MonoBehaviour
         if (Input.GetKeyDown(Melee.key))
         {
             Melee.Execute();
+        }
+        //Reload
+        if(Input.GetKeyDown(Reload.key))
+        {
+            Reload.Execute();
         }
     }
 }

@@ -9,11 +9,16 @@ public class Shooting : MonoBehaviour
 
     //Gun
     public Transform Gun;
-    
+    public float damageReg;
+    public float damageBuff;
+
     //Bullets
     public GameObject bullet;
     public Transform bulletSpawn;
-    public float bulletSpeed = 20.0f;
+    public float bulletSpeed;
+
+    int ammo;
+    public int ammoMax;
 
     //Awake
     private void Awake()
@@ -22,14 +27,26 @@ public class Shooting : MonoBehaviour
         {
             instance = this;
         }
+        ammo = ammoMax;
     }
 
     public void Shoot()
     {
-        Rigidbody bulletRb = ObjectPooler.instance.SpawnFromPool("Bullet",bulletSpawn.position,bulletSpawn.rotation).GetComponent<Rigidbody>();
-        bulletRb.AddForce(bulletSpawn.forward * bulletSpeed, ForceMode.Impulse);
+        //Expend ammo
+        ammo = ammo - 1;
+        if (ammo >= 0)
+        {
+            Rigidbody bulletRb = ObjectPooler.instance.SpawnFromPool("Bullet", bulletSpawn.position, bulletSpawn.rotation).GetComponent<Rigidbody>();
+            bulletRb.AddForce(bulletSpawn.forward * bulletSpeed, ForceMode.Impulse);
+        }
+        //Debug.Log(ammo);
     }
 
+    //Reload Function
+    public void Reload()
+    {
+        ammo = ammoMax;
+    }
     private void Update()
     {
        

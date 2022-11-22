@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class AchivementManager : Observer
 {
-    Subject u_subject;
+    public Subject u_subject;
     private void Awake()
     {
+        u_subject= GetComponent<Subject>();
         u_subject.AddObserver(this);
     }
 

@@ -40,6 +40,13 @@ public class MeleeCommand : Command
 {
     public override void Execute()
     {
-        //Melee();
+        Melee.instance.Strike();
+    }
+}
+public class ReloadCommand : Command
+{
+    public override void Execute()
+    {
+        Shooting.instance.Reload();
     }
 }

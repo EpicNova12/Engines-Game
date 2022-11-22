@@ -68,10 +68,13 @@
     <Compile Include="Assets\Scripts\Gun\ShootingOld.cs" />
     <Compile Include="Assets\Scripts\Achievements\AchivementManager.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\Gun\Melee.cs" />
+    <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Observer.cs" />
     <Compile Include="Assets\Scripts\Achievements\Achivement.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PluginTester.cs" />
+    <Compile Include="Assets\Scripts\Gun\Blade.cs" />
     <Compile Include="Assets\Scripts\Gun\BulletOld.cs" />
     <Compile Include="Assets\Scripts\Gun\Shooting.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraHolder.cs" />
@@ -358,6 +361,12 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Android.Types">
+      <HintPath>D:\Software\2021.3.10f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Android.Gradle">
+      <HintPath>D:\Software\2021.3.10f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:\Software\2021.3.10f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
