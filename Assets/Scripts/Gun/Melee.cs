@@ -7,9 +7,11 @@ public class Melee : MonoBehaviour
     public static Melee instance;
 
     //Weapon
-    public GameObject meleeWeapon;
+    public Transform weaponLoc;
+    public GameObject meleeWeaponHB;
     private BoxCollider meleeHitbox;
-
+    //So Unity makes no sense and collisions only work with rigidbodies, triggers also dont work, I guess colliders are pointless, wasted a whole day on this thanks unity
+    private Rigidbody hitboxRb;
     //Variables
     private bool swing = false;
     private int cycle = 0;
@@ -28,8 +30,10 @@ public class Melee : MonoBehaviour
     public void Start()
     {
         //Set the melee hitbox to our weapons hitbox
-        meleeHitbox = meleeWeapon.GetComponent<BoxCollider>();
+        meleeHitbox = meleeWeaponHB.GetComponent<BoxCollider>();
         meleeHitbox.enabled = false;
+        //Get Rigidbody
+        hitboxRb = meleeWeaponHB.GetComponent<Rigidbody>();
     }
 
     public void Strike()
@@ -37,6 +41,8 @@ public class Melee : MonoBehaviour
         //Activate Collider for Swing
         meleeHitbox.enabled = true;
         swing = true;
+        hitboxRb.transform.position = weaponLoc.position;
+        hitboxRb.transform.rotation = weaponLoc.rotation;
     }
     // Update is called once per frame
     void Update()
@@ -46,12 +52,18 @@ public class Melee : MonoBehaviour
         {
             //Keeps track of frames
             cycle = cycle + 1;
+            hitboxRb.transform.position = weaponLoc.position;
+            hitboxRb.transform.rotation = weaponLoc.rotation;
         }
-        if(cycle>=attackSpeed)
+        if (cycle>=attackSpeed)
         {
             swing = false;
             cycle = 0;
             meleeHitbox.enabled = false;
+            hitboxRb.velocity = new Vector3(0.0f, 0.0f, 0.0f);
+            hitboxRb.angularVelocity = new Vector3(0.0f, 0.0f, 0.0f);
+            hitboxRb.transform.position = weaponLoc.position;
+            hitboxRb.transform.rotation = weaponLoc.rotation;
         }
     }
 }

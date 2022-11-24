@@ -39,7 +39,7 @@ public class Enemy : MonoBehaviour
         return u_enemy.hp;
     }
 
-    private void OnCollisionEnter(Collision other)
+   private void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.tag == "Bullet")
         {
@@ -47,9 +47,23 @@ public class Enemy : MonoBehaviour
             other.gameObject.SetActive(false);
         }
 
-        if(other.gameObject.tag == "Weapon")
+        if (other.gameObject.tag == "Weapon")
         {
             TakeDamage(Melee.instance.damageReg);
         }
     }
+
+    /*private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Bullet")
+        {
+            TakeDamage(Shooting.instance.damageReg);
+            other.gameObject.SetActive(false);
+        }
+
+        if (other.gameObject.tag == "Weapon")
+        {
+            TakeDamage(Melee.instance.damageReg);
+        }
+    }*/
 }
