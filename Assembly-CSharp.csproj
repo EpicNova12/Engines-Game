@@ -70,18 +70,20 @@
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Gun\Melee.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts\Observer.cs" />
+    <Compile Include="Assets\Scripts\Observer\Observer.cs" />
     <Compile Include="Assets\Scripts\Achievements\Achivement.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PluginTester.cs" />
     <Compile Include="Assets\Scripts\Gun\Blade.cs" />
+    <Compile Include="Assets\Scripts\Menu\MenuControl.cs" />
     <Compile Include="Assets\Scripts\Gun\BulletOld.cs" />
     <Compile Include="Assets\Scripts\Gun\Shooting.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraHolder.cs" />
     <Compile Include="Assets\Scripts\Achievements\TestAchivement.cs" />
     <Compile Include="Assets\Scripts\Gun\Bullet.cs" />
-    <Compile Include="Assets\Scripts\Subject.cs" />
-    <Compile Include="Assets\Scripts\Menu\MenuControl.cs" />
+    <Compile Include="Assets\Scripts\Observer\Subject.cs" />
+    <Compile Include="Assets\Scripts\UserMectricsLogger\Logger.cs" />
+    <Compile Include="Assets\Scripts\UserMectricsLogger\UserMectrics.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

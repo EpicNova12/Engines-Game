@@ -20,24 +20,37 @@ public class ButtonConfig : MonoBehaviour
 
     public void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Backslash))
+        //I want to have this done in GUI but due to time I have to simplify it to show functionality
+        //Also Unity GUI is giving me the run around
+        if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            ChangeConfig();
+            currentConfig = 1;
+            SwapKeys(currentConfig);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            currentConfig = 2;
+            SwapKeys(currentConfig);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            currentConfig = 3;
+            SwapKeys(currentConfig);
         }
     }
-    public void ChangeConfig()
+    /*public void ChangeConfig()
     {
         if (currentConfig==1)
         {
-            UpdateText("Config 1");
+            //UpdateText("Config 1");
             SwapKeys(currentConfig);
         }
-        if (currentConfig == 2)
+        else if (currentConfig == 2)
         {
-            UpdateText("Config 2");
+            //UpdateText("Config 2");
             SwapKeys(currentConfig);
         }
-    }
+    }*/
     
     private void UpdateText(string newText)
     {
@@ -55,6 +68,13 @@ public class ButtonConfig : MonoBehaviour
             InputHandler.instance.SwapKeys("Shoot", KeyCode.Mouse1);
             InputHandler.instance.SwapKeys("Melee", KeyCode.Mouse0);
             InputHandler.instance.SwapKeys("Reload",KeyCode.Mouse3);
+        }
+        else if (config == 3)
+        {
+            InputHandler.instance.SwapKeys("Shoot", KeyCode.Mouse1);
+            InputHandler.instance.SwapKeys("Melee", KeyCode.Mouse0);
+            InputHandler.instance.SwapKeys("Reload", KeyCode.Mouse3);
+            InputHandler.instance.SwapKeys("Jump",KeyCode.RightControl);
         }
     }
 

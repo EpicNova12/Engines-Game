@@ -15,7 +15,7 @@ public class AchivementManager : Observer
     {
         //u_event is how the type of event is dictated
 
-        //Alpha is the code for Achivements
+        //Alpha is the code for Mectrics Logging
         if(u_event=="Alpha")
         {
             Debug.Log("You got the " + value + "Achivement!");

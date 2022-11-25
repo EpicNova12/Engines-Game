@@ -47,6 +47,18 @@ public class Shooting : MonoBehaviour
     {
         ammo = ammoMax;
     }
+
+    public bool CheckAmmo()
+    {
+        if(ammo<=0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
     private void Update()
     {
        

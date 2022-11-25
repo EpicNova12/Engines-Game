@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputHandler : MonoBehaviour
+public class InputHandler : Subject
 {
     //Using a singleton to keep things simple, since input handler is a game system, having it as a singleton will make sure there is only ever one
     public static InputHandler instance;
@@ -20,7 +20,7 @@ public class InputHandler : MonoBehaviour
             instance = this;
         }
         //Sets up default key config
-        OpenMenu.key = KeyCode.Escape;
+        OpenMenu.key = KeyCode.Tilde;
         Jump.key= KeyCode.Space;
         Shoot.key = KeyCode.Mouse0;
         Melee.key = KeyCode.Mouse1;
@@ -37,19 +37,29 @@ public class InputHandler : MonoBehaviour
         if (Input.GetKeyDown(Jump.key))
         {
             Jump.Execute();
+            Notify("Null", "Jump");
         }
         //Shoot
         if (Input.GetKeyDown(Shoot.key))
         {
             Shoot.Execute();
+            if(Shooting.instance.CheckAmmo()==true)
+            {
+                Notify("Null", "Shoot");
+            }
+            else if(Shooting.instance.CheckAmmo()==false)
+            {
+                Notify("Null","ExtraShot");
+            }
         }
         //Melee
         if (Input.GetKeyDown(Melee.key))
         {
             Melee.Execute();
+            Notify("Null", "Swing");
         }
         //Reload
-        if(Input.GetKeyDown(Reload.key))
+        if (Input.GetKeyDown(Reload.key))
         {
             Reload.Execute();
         }
