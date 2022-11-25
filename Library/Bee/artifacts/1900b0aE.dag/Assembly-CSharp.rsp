@@ -359,9 +359,7 @@
 "Assets/Scripts/Achievements/AchievementList.cs"
 "Assets/Scripts/Achievements/Achivement.cs"
 "Assets/Scripts/Achievements/AchivementManager.cs"
-"Assets/Scripts/Achievements/Subject.cs"
 "Assets/Scripts/Achievements/TestAchivement.cs"
-"Assets/Scripts/ButtonConfig.cs"
 "Assets/Scripts/Camera/CameraControls.cs"
 "Assets/Scripts/Camera/CameraHolder.cs"
 "Assets/Scripts/Command.cs"
@@ -374,6 +372,8 @@
 "Assets/Scripts/Gun/Shooting.cs"
 "Assets/Scripts/Gun/ShootingOld.cs"
 "Assets/Scripts/InputHandler.cs"
+"Assets/Scripts/Menu/ButtonConfig.cs"
+"Assets/Scripts/Menu/MenuControl.cs"
 "Assets/Scripts/ObjectPool/ObjectPooler.cs"
 "Assets/Scripts/ObjectPool/Pool.cs"
 "Assets/Scripts/Observer.cs"
@@ -381,6 +381,7 @@
 "Assets/Scripts/PlayerHealth.cs"
 "Assets/Scripts/PlayerMovement.cs"
 "Assets/Scripts/PluginTester.cs"
+"Assets/Scripts/Subject.cs"
 -langversion:9.0
 
 /deterministic

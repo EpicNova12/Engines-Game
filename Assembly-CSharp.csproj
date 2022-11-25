@@ -63,7 +63,7 @@
     <Compile Include="Assets\Scripts\InputHandler.cs" />
     <Compile Include="Assets\Scripts\DropDown.cs" />
     <Compile Include="Assets\Scripts\ObjectPool\Pool.cs" />
-    <Compile Include="Assets\Scripts\ButtonConfig.cs" />
+    <Compile Include="Assets\Scripts\Menu\ButtonConfig.cs" />
     <Compile Include="Assets\Scripts\Achievements\AchievementList.cs" />
     <Compile Include="Assets\Scripts\Gun\ShootingOld.cs" />
     <Compile Include="Assets\Scripts\Achievements\AchivementManager.cs" />
@@ -80,7 +80,8 @@
     <Compile Include="Assets\Scripts\Camera\CameraHolder.cs" />
     <Compile Include="Assets\Scripts\Achievements\TestAchivement.cs" />
     <Compile Include="Assets\Scripts\Gun\Bullet.cs" />
-    <Compile Include="Assets\Scripts\Achievements\Subject.cs" />
+    <Compile Include="Assets\Scripts\Subject.cs" />
+    <Compile Include="Assets\Scripts\Menu\MenuControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

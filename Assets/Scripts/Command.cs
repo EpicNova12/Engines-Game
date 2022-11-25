@@ -19,7 +19,7 @@ public class OpenMenuCommand : Command
 {
     public override void Execute()
     {
-        //OpenMenu
+        MenuControl.instance.OpenMenu();
     }
 }
 public class JumpCommand: Command
