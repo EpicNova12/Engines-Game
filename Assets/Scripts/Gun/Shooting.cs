@@ -18,6 +18,7 @@ public class Shooting : MonoBehaviour
     public float bulletSpeed;
 
     int ammo;
+    public int ammoBuff;
     public int ammoMax;
 
     //Awake
@@ -28,14 +29,15 @@ public class Shooting : MonoBehaviour
             instance = this;
         }
         ammo = ammoMax;
+        ammoBuff = 0;
     }
 
     public void Shoot()
     {
         //Expend ammo
-        ammo = ammo - 1;
-        if (ammo >= 0)
+        if (ammo >= 1)
         {
+            ammo = ammo - 1;
             Rigidbody bulletRb = ObjectPooler.instance.SpawnFromPool("Bullet", bulletSpawn.position, bulletSpawn.rotation).GetComponent<Rigidbody>();
             bulletRb.AddForce(bulletSpawn.forward * bulletSpeed, ForceMode.Impulse);
         }
@@ -57,6 +59,31 @@ public class Shooting : MonoBehaviour
         else
         {
             return true;
+        }
+    }
+    //Buff nest shot
+    public void BuffBullet()
+    {
+        if(ammoBuff<6)
+        {
+            ammoBuff = ammoBuff + 1;
+        }
+    }
+
+    public void RemoveBuff()
+    {
+        ammoBuff = ammoBuff - 1;
+    }
+
+    public bool BuffAttack()
+    {
+        if(ammoBuff>=1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
     private void Update()

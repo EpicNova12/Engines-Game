@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        Debug.Log(u_enemy.hp);
+        //Debug.Log(u_enemy.hp);
     }
 
     public float GetHP()
@@ -43,13 +43,38 @@ public class Enemy : MonoBehaviour
     {
         if(other.gameObject.tag == "Bullet")
         {
-            TakeDamage(Shooting.instance.damageReg);
+            if (Shooting.instance.BuffAttack() == true)
+            {
+                TakeDamage(Shooting.instance.damageBuff);
+                Shooting.instance.RemoveBuff();
+            }
+            else if (Shooting.instance.BuffAttack() == false)
+            {
+                TakeDamage(Shooting.instance.damageReg);
+            }
+
+            Melee.instance.AddBuff();
+
+            Debug.Log("Melee Buff: " + Melee.instance.buffStack);
             other.gameObject.SetActive(false);
         }
 
         if (other.gameObject.tag == "Weapon")
         {
-            TakeDamage(Melee.instance.damageReg);
+            if (Melee.instance.BuffAttack() == true)
+            {
+                TakeDamage(Melee.instance.damageBuff);
+                Melee.instance.RemoveBuff();
+                Debug.Log("Swish");
+            }
+            else if (Melee.instance.BuffAttack() == false)
+            {
+                TakeDamage(Melee.instance.damageReg);
+            }
+            Debug.Log(Melee.instance.BuffAttack());
+
+            Shooting.instance.BuffBullet();
+            Debug.Log("Ammo Buff: " + Shooting.instance.ammoBuff);
         }
     }
 

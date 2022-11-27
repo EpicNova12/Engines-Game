@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Melee : MonoBehaviour
 {
@@ -16,8 +18,13 @@ public class Melee : MonoBehaviour
     private bool swing = false;
     private int cycle = 0;
     public int attackSpeed;    //How many frames the hitbox will last, so the lower it is the faster the attack
+
+    //Damage Values
     public float damageReg;
     public float damageBuff;
+    
+    //Buffs
+    public int buffStack;
 
     private void Awake()
     {
@@ -25,6 +32,7 @@ public class Melee : MonoBehaviour
         {
             instance = this;
         }
+        buffStack = 0;
     }
 
     public void Start()
@@ -43,6 +51,29 @@ public class Melee : MonoBehaviour
         swing = true;
         hitboxRb.transform.position = weaponLoc.position;
         hitboxRb.transform.rotation = weaponLoc.rotation;
+    }
+    
+    //Buffs next attack
+    public void AddBuff()
+    {
+        buffStack=buffStack+1;
+    }
+
+    public void RemoveBuff()
+    {
+        buffStack = buffStack - 1;
+    }
+
+    public bool BuffAttack()
+    {
+        if(buffStack>=1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
     // Update is called once per frame
     void Update()

@@ -29,22 +29,22 @@ public class UserMectrics :MonoBehaviour
         if (var=="Jumps")
         {
             jumps = jumps + 1;
-            Debug.Log(jumps);
+            //Debug.Log(jumps);
         }
         else if(var=="ExtraShots")
         {
             extraShots = extraShots + 1;
-            Debug.Log(extraShots);
+            //Debug.Log(extraShots);
         }
         else if (var == "BulletsFired")
         {
             bulletsFired = bulletsFired + 1;
-            Debug.Log(bulletsFired);
+            //Debug.Log(bulletsFired);
         }
         else if (var == "MeleeAttacks")
         {
             meleeAttacks = meleeAttacks + 1;
-            Debug.Log(meleeAttacks);
+           // Debug.Log(meleeAttacks);
         }
     }
 }
