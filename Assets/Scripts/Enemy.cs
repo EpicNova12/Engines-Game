@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class Enemy : MonoBehaviour
 {
     Enemy u_enemy;
@@ -10,11 +10,14 @@ public class Enemy : MonoBehaviour
     public float hpMax;
     private float hp;
 
+    public TMP_Text displayHealth;
+
     // Start is called before the first frame update
     void Start()
     {
         u_enemy = this;
         u_enemy.hp=u_enemy.hpMax;
+        UpdateDisplay();
     }
 
     // Update is called once per frame
@@ -57,6 +60,7 @@ public class Enemy : MonoBehaviour
 
             Debug.Log("Melee Buff: " + Melee.instance.buffStack);
             other.gameObject.SetActive(false);
+            UpdateDisplay();
         }
 
         if (other.gameObject.tag == "Weapon")
@@ -75,7 +79,13 @@ public class Enemy : MonoBehaviour
 
             Shooting.instance.BuffBullet();
             Debug.Log("Ammo Buff: " + Shooting.instance.ammoBuff);
+            UpdateDisplay();
         }
+    }
+
+    private void UpdateDisplay()
+    {
+        displayHealth.text = hp.ToString() ;
     }
 
     /*private void OnTriggerEnter(Collider other)

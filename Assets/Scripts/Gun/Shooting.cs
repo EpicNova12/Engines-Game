@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class Shooting : MonoBehaviour
 {
     //Instance
@@ -21,6 +21,11 @@ public class Shooting : MonoBehaviour
     public int ammoBuff;
     public int ammoMax;
 
+    //Get ammo display
+    public TMP_Text displayAmmo;
+    //Get buff display
+    public TMP_Text displayBuff;
+
     //Awake
     private void Awake()
     {
@@ -30,6 +35,7 @@ public class Shooting : MonoBehaviour
         }
         ammo = ammoMax;
         ammoBuff = 0;
+        UpdateDisplayAmmo();
     }
 
     public void Shoot()
@@ -41,6 +47,7 @@ public class Shooting : MonoBehaviour
             Rigidbody bulletRb = ObjectPooler.instance.SpawnFromPool("Bullet", bulletSpawn.position, bulletSpawn.rotation).GetComponent<Rigidbody>();
             bulletRb.AddForce(bulletSpawn.forward * bulletSpeed, ForceMode.Impulse);
         }
+        UpdateDisplayAmmo();
         //Debug.Log(ammo);
     }
 
@@ -48,6 +55,7 @@ public class Shooting : MonoBehaviour
     public void Reload()
     {
         ammo = ammoMax;
+        UpdateDisplayAmmo();
     }
 
     public bool CheckAmmo()
@@ -68,11 +76,13 @@ public class Shooting : MonoBehaviour
         {
             ammoBuff = ammoBuff + 1;
         }
+        UpdateDisplayBuff();
     }
 
     public void RemoveBuff()
     {
         ammoBuff = ammoBuff - 1;
+        UpdateDisplayBuff();
     }
 
     public bool BuffAttack()
@@ -89,5 +99,14 @@ public class Shooting : MonoBehaviour
     private void Update()
     {
        
+    }
+    //Update the ammo counter
+    private void UpdateDisplayAmmo()
+    {
+        displayAmmo.text = ammo.ToString();
+    }
+    private void UpdateDisplayBuff()
+    {
+        displayBuff.text = ammoBuff.ToString();
     }
 }

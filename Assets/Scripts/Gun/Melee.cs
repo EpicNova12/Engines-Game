@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
+using TMPro;
 
 public class Melee : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class Melee : MonoBehaviour
     
     //Buffs
     public int buffStack;
+
+    public TMP_Text displayBuff;
 
     private void Awake()
     {
@@ -57,11 +60,13 @@ public class Melee : MonoBehaviour
     public void AddBuff()
     {
         buffStack=buffStack+1;
+        UpdateDisplay();
     }
 
     public void RemoveBuff()
     {
         buffStack = buffStack - 1;
+        UpdateDisplay();
     }
 
     public bool BuffAttack()
@@ -96,5 +101,9 @@ public class Melee : MonoBehaviour
             hitboxRb.transform.position = weaponLoc.position;
             hitboxRb.transform.rotation = weaponLoc.rotation;
         }
+    }
+    private void UpdateDisplay()
+    {
+        displayBuff.text = buffStack.ToString();
     }
 }
