@@ -1,8 +1,11 @@
 # Slash and Blast
 Current Up to date Project Kanban Board
-![GameEnginesKanban](https://user-images.githubusercontent.com/56273648/201568792-8e5ecdb8-f05c-481c-bbce-eca38fb1ab41.png)
+![Kanban1](https://user-images.githubusercontent.com/56273648/205194179-f906bb8a-02b8-4b36-8550-32db80bbd263.png)
+![Kanban2](https://user-images.githubusercontent.com/56273648/205194203-003b6416-a9c9-46d2-8472-ffa44670f26e.png)
 
 Executeable is in the EXE folder
+
+Statement of Contributions located in the repo
 
 Roles:
 Since I am a solo developer I am in charge of all aspects of the game 
