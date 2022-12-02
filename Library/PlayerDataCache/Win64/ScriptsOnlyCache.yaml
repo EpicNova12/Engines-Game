@@ -36,10 +36,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -669,7 +667,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 0c8dd8aa4badb275bf597f887b0e9763
+      Hash: 9db2c6323484ba0e8806c90a536eb881
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ShootingOld
@@ -945,7 +943,7 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionEnter2DMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 8903e6ce37a21828e1d3ce999b8aa1c6
+      Hash: f3bf846342c6ffcc7a1a32c8fe94bc1b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
