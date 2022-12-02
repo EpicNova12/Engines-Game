@@ -9,3 +9,6 @@ Statement of Contributions located in the repo
 
 Roles:
 Since I am a solo developer I am in charge of all aspects of the game 
+
+Activity:
+![Commits](https://user-images.githubusercontent.com/56273648/205194574-828e9762-1ac4-4e98-b40c-1fe8da990fde.png)
