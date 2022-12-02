@@ -4878,10 +4878,11 @@ MonoBehaviour:
   orientation: {fileID: 1417731907}
   playerSpeed: 7
   groundDrag: 5
-  airDrag: 0
-  jumpForce: 10
+  airDrag: 3
+  gravity: 10
+  jumpForce: 25
   jumpCooldown: 0.5
-  airMultiplier: 0.2
+  airMultiplier: 0.35
 --- !u!4 &1801508755
 Transform:
   m_ObjectHideFlags: 0
@@ -4960,9 +4961,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gun: {fileID: 0}
+  damageReg: 0
+  damageBuff: 0
   bullet: {fileID: 3378636760032030824, guid: 9d7558d4bf7777c4592f228410065017, type: 3}
   bulletSpawn: {fileID: 78373580}
   bulletSpeed: 20
+  ammoBuff: 0
+  ammoMax: 0
+  displayAmmo: {fileID: 0}
+  displayBuff: {fileID: 0}
 --- !u!114 &1801508761
 MonoBehaviour:
   m_ObjectHideFlags: 0

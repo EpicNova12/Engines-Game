@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
     public float groundDrag;
     public float airDrag;
     Vector3 m_direction;
+    public float gravity;
 
     //Jumping
     [Header("Jumping")]
@@ -77,7 +78,8 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            playerBody.drag = 0.0f;
+            playerBody.drag = airDrag;
+            playerBody.AddForce(new Vector3(0.0f, -gravity, 0.0f), ForceMode.Acceleration);
         }
         GetInput();
     }
@@ -157,5 +159,5 @@ public class PlayerMovement : MonoBehaviour
     }
 }
 
-//Camera and movement code from
+//Movement code from
 //https://youtu.be/f473C43s8nE

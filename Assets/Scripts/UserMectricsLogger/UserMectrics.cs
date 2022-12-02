@@ -44,7 +44,7 @@ public class UserMectrics :MonoBehaviour
         else if (var == "MeleeAttacks")
         {
             meleeAttacks = meleeAttacks + 1;
-           // Debug.Log(meleeAttacks);
+            //Debug.Log(meleeAttacks);
         }
     }
 }
